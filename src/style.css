@@ -1,0 +1,145 @@
+*{box-sizing: border-box;}
+*::before,*::after{box-sizing: border-box;}
+
+body {
+  background:#FFE600;
+}
+
+.skin{
+  position: relative;
+}
+
+.nose{
+
+  border-top: 7px solid black;
+  border-left: 10px solid pink;
+  border-right: 10px solid green;
+  border-color: black transparent transparent;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  left: 50%;
+  top: 220px;
+  transform: translateX(-50%);
+}
+.nose .nose_top{
+  background: black;
+  position: relative;
+  border-color: black;
+  border-radius: 50% / 100% 100% 0 0;
+  width: 20px;
+  height: 5px;
+  transform: translateX(-50%);
+  bottom: 12px;
+}
+
+.eyes{
+  width: 64px;
+  height: 64px;
+  border: 2px solid black;
+  position: absolute;
+  left: 50%;
+  top:155px;
+  margin-left: -32px;
+  border-radius: 50%;
+  background: #2e2e2e;
+}
+.eyes::before{
+  border-radius: 50%;
+  display: block;
+  content:'';
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  background: white;
+  position: relative;
+  left:5px;
+  top: 2px;
+
+}
+
+.eyes.left{
+  transform: translateX(-120px);
+}
+
+.eyes.right{
+  transform: translateX(120px);
+}
+.mouth {
+  position: absolute;
+  height: 400px;
+  left: 50%;
+  top: 250px;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  overflow: hidden;
+
+
+}
+
+.mouth .up .lip{
+  width: 45px;
+  height: 80px;
+  border: 3px solid black;
+  position: absolute;
+  left: 50%;
+  top: -34px;
+  background: #FFE600;
+  z-index: 1;
+}
+
+.mouth .up .lip.left{
+  border-radius: 100% 0;
+  border-left: 0px;
+  border-top: 0px;
+  margin-left:-66px;
+  transform: rotate(55deg);
+}
+.mouth .up .lip.right{
+  border-radius: 0 100%;
+  border-right: 0px;
+  border-top: 0px;
+  margin-left:22px;
+  transform: rotate(-55deg);
+}
+.mouth .down{
+  border:3px solid black;
+  width: 130px;
+  height: 500px;
+  position: absolute;
+  top: -320px;
+  left:50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #971d17;
+  overflow: hidden;
+}
+
+.mouth .down .tongue{
+  position: absolute;
+  top: 350px;
+  width: 130px;
+  height: 145px;
+  border-radius: 50%;
+  transform: translateX(-3px);
+  background: #FF485F;
+} 
+
+.face{
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  border: 3px solid black;
+  background: #F00;
+  border-radius: 50%;
+  left: 50%;
+  top: 250px;
+  margin-left: -41px;
+}
+.face.left{
+  transform: translateX(200px);
+}
+.face.right{
+  transform: translateX(-200px);
+}
