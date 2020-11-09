@@ -1,7 +1,10 @@
-const string = `    .skin {
-  position: relative;
+const string = `/* 首先,需要准备皮卡丘的皮 */
+ .skin {
+  height: 50vh;
+  background: #FFE600;
+  
 }
-
+/* 接下来画皮卡丘的鼻子 */
 .nose {
   position: relative;
   top: 120px;
@@ -24,8 +27,8 @@ const string = `    .skin {
   border-color: black;
   width: 20px;
   height: 5px;
-  
 }
+/* 接下来，画皮卡丘的眼睛 */
 .eyes {
   position: absolute;
   left: 50%;
@@ -38,7 +41,7 @@ const string = `    .skin {
   border: 2px solid black;
 
 }
-
+/* 眼睛里面的珠子 */
 .eyes::before {
   position: relative;
   left: 5px;
@@ -50,17 +53,16 @@ const string = `    .skin {
   height: 30px;
   border: 2px solid black;
   background: white;
-
 }
-
+/* 左眼在左边 */
 .eyes.left {
   transform: translateX(-120px);
 }
-
+/* 右眼在右边 */
 .eyes.right {
   transform: translateX(120px);
 }
-
+/* 接下来画嘴巴 */
 .mouth {
   position: absolute;
   height: 400px;
@@ -71,7 +73,7 @@ const string = `    .skin {
   margin-left: -100px;
   overflow: hidden;
 }
-
+/* 上嘴唇 */
 .mouth .up .lip {
   width: 45px;
   height: 80px;
@@ -82,7 +84,6 @@ const string = `    .skin {
   background: #FFE600;
   z-index: 1;
 }
-
 .mouth .up .lip.left {
   border-radius: 100% 0;
   border-left: 0px;
@@ -90,7 +91,6 @@ const string = `    .skin {
   margin-left: -66px;
   transform: rotate(55deg);
 }
-
 .mouth .up .lip.right {
   border-radius: 0 100%;
   border-right: 0px;
@@ -98,7 +98,7 @@ const string = `    .skin {
   margin-left: 22px;
   transform: rotate(-55deg);
 }
-
+/* 下嘴唇 */
 .mouth .down {
   border: 3px solid black;
   width: 130px;
@@ -111,7 +111,7 @@ const string = `    .skin {
   background: #971d17;
   overflow: hidden;
 }
-
+/* 小舌头 */
 .mouth .down .tongue {
   position: absolute;
   top: 350px;
@@ -121,7 +121,7 @@ const string = `    .skin {
   transform: translateX(-3px);
   background: #FF485F;
 }
-
+/* 然后，画皮卡丘的脸 */
 .face {
   position: absolute;
   top: 150px;
@@ -133,36 +133,32 @@ const string = `    .skin {
   left: 50%;
   margin-left: -41px;
 }
-
+/* 将脸放到正确的位置 */
 .face.left {
   transform: translateX(200px);
 }
-
 .face.right {
   transform: translateX(-200px);
 }
-
+/* 让鼠标移到皮卡丘的鼻子可以动起来 */
 @keyframes wave {
   0% {
     transform: rotate(0deg);
   }
-
   33% {
     transform: rotate(-15deg);
   }
-
   66% {
     transform: rotate(15deg);
   }
-
   100% {
     transform: rotate(0deg);
   }
 }
-
 .nose:hover {
   animation: wave .1s infinite linear;
-}`
+}
+/* 好了,这只皮卡丘送给你 */`
 let n = 0
 let time = 100
 const run = () =>{
