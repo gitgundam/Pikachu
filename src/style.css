@@ -22,6 +22,8 @@ body {
   padding: 10px;
   z-index: 10;
   overflow: scroll;
+  white-space: gitpre;
+  font-family: monospace;
 }
 
 #show_text::-webkit-scrollbar {
